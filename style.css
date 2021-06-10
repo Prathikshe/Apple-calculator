@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.calculator {
+  font-family: "Helvetica Neue", sans-serif; 
+  background: black;
+
+  color: white;
+  min-height: 100%;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.top-container {
+  display: flex;
+  height: 20%;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 50%;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 0 3%;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.clock:hover .tooltiptext {
+  visibility: visible;
+}
+
+.value {
+  font-size: 500%;
+  height: 25%;
+  margin-bottom: 4%;
+  margin-right: 4%;
+  text-align: right;
+}
+
+.buttons-container {
+  display: grid;
+  grid-gap: 10%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.button {
+  align-items: center;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 200%;
+  height: 130%;
+  justify-content: center;
+  transition: filter .3s;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+@media only screen and (min-height: 568px) {
+
+.value {
+margin-top: 60px; 
+}
+}
+@media only screen and (min-height: 640px) {
+
+.value {
+margin-top: 120px; 
+}
+}
+@media only screen and (min-height: 667px) {
+
+.value {
+margin-top: 160px; 
+}
+}
+@media only screen and (min-height: 736px) {
+
+.value {
+margin-top: 190px; 
+}
+}
+@media only screen and (min-height: 812px) {
+
+.value {
+margin-top: 260px; 
+}
+}
+@media only screen and (min-height: 1024px) {
+
+.value {
+margin-top: 420px; 
+}
+}
+
+.button.function {
+  color: black;
+  background: #a5a5a5;
+}
+
+.button.operator {
+  background: #f1a33c;
+}
+
+.button.number-0 {
+  border-radius: 20% / 50%;
+  grid-column: 1 / span 2;
+  justify-content: flex-start;
+  padding-left: 45%;
+  width: 100%;
+}
+
+.button:active,
+.button:focus {
+  filter: brightness(120%);
+}
+
+.bottom {
+  width: 200px;
+  height: 5px;
+  background: white;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 679px) {
+ .value{
+  margin-bottom: 2px;
+ }
+  .button {
+  width: 35%;
+  height: 140%;
+  margin-bottom: 3%; 
+ }
+ .button.number-0 {
+border-radius: 10% / 50%;
+  width: 75%;
+   padding-left: 35%;
+ }
+}
